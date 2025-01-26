@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Shadows+Into+Light&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	overflow-x: hidden;
+	font-family: "Playfair Display SC", serif;
+}
+.container {
+	overflow: hidden;
+	height: 100vh;
+}
+
+.loader {
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	/* z-index: -1; */
+	background: rgb(235, 234, 234);
+	overflow: hidden;
+	pointer-events: none;
+}
+.content {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	height: 100vh;
+}
+.textPage {
+	/* height: 200vh; */
+	width: 100vw;
+	height: 200vh;
+	position: absolute;
+	/* top: 100vh; */
+	z-index: 40;
+	/* background: rgb(235, 234, 234); */
+	/* background: red; */
+}
+.loaderImages {
+	width: 100%;
+	display: flex;
+	gap: 50px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+.loaderImages .img {
+	position: relative;
+	flex: 1;
+	height: 400px;
+	clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+.loaderImages .img img {
+	/* width: 150px;
+	height: 200px; */
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+nav {
+	position: sticky;
+	z-index: 2;
+	width: 100%;
+	padding: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	/* background: rgb(231, 248, 231); */
+	gap: 50px;
+}
+nav .navItem {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.navItem {
+	position: relative;
+	flex: 1;
+	font-family: "Bebas Neue", serif;
+	margin-bottom: 10rem;
+}
+.navItem a {
+	position: relative;
+	color: rgb(49, 49, 49);
+	font-size: 1.3rem;
+	z-index: 6;
+}
+.logo a {
+	/* font-size: 44px !important; */
+}
+.hero {
+	position: absolute;
+
+	height: 100%;
+	width: 100%;
+	top: 65%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.hero h1 {
+	width: 100%;
+
+	display: flex;
+	justify-content: center;
+	clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.hero .h1 h1 {
+	color: rgb(56, 54, 54);
+	font-weight: 400;
+	font-size: 5vw;
+}
+.bold h1 {
+	font-size: 200px !important;
+	text-transform: uppercase;
+	font-family: "Lilita One", serif;
+	margin-top: 2rem;
+	/* color: rgb(228, 96, 96) !important; */
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+
+footer {
+	width: 40%;
+	position: absolute;
+	display: flex;
+	right: 0%;
+	bottom: 30px;
+	clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+	gap: 10px;
+	justify-content: space-between;
+}
+.item {
+	position: relative;
+
+	height: 40px;
+	margin: 0 5px;
+	object-fit: contain;
+	/* flex: 1; */
+}
+.item img {
+	width: 90px;
+}
+
+/* About Page */
+.aboutPage {
+	height: 100vh;
+	width: 100vw;
+	background: green;
+}
