@@ -146,7 +146,7 @@ ScrollTrigger.create({
 	start: "top top",
 	end: "+=100%",
 	pin: true,
-	markers: true,
+	// markers: true,
 	onUpdate: (self) => {
 		const progress = self.progress;
 		gsap.to(".heroIntro h1", {
@@ -189,3 +189,17 @@ ScrollTrigger.create({
 		});
 	},
 });
+
+const tll = gsap
+	.timeline({
+		scrollTrigger: {
+			trigger: ".aboutPage",
+			start: "top 100%",
+			scrub: true,
+		},
+	})
+	.to(".imgg", {
+		stagger: 0.2,
+		y: -700,
+		scrub: true,
+	});

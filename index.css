@@ -5,13 +5,15 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	/* overflow-x: hidden;
+	overflow-y: scroll; */
 }
 body {
 	overflow-x: hidden;
 	font-family: "Playfair Display SC", serif;
 }
 .container {
-	overflow: hidden;
+	overflow: hidden !important;
 	height: 100vh;
 }
 
@@ -30,6 +32,7 @@ body {
 	top: 0;
 	left: 0;
 	height: 100vh;
+	overflow: hidden;
 }
 .textPage {
 	/* height: 200vh; */
@@ -75,6 +78,7 @@ nav {
 	justify-content: space-between;
 	/* background: rgb(231, 248, 231); */
 	gap: 50px;
+	overflow-x: hidden;
 }
 nav .navItem {
 	width: 100%;
@@ -153,7 +157,186 @@ footer {
 
 /* About Page */
 .aboutPage {
-	height: 100vh;
+	position: absolute;
+	top: 300vh;
+	height: 350vh;
 	width: 100vw;
-	background: green;
+	/* background: yellow; */
+	z-index: 3;
+}
+.aboutPage h2 {
+	font-size: 180px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	margin-top: 6rem;
+	width: 60%;
+	font-family: "Bebas Neue", serif;
+	font-weight: 800;
+	color: #aeabab;
+	z-index: 2;
+}
+.blank h3 {
+	font-size: 130px;
+	/* position: absolute; */
+	/* left: 50%;
+	top: 55%;
+	transform: translate(-50%, -50%); */
+	text-align: center;
+
+	width: 80% !important;
+	font-family: "Bebas Neue", serif;
+	font-weight: 800;
+	color: #aeabab;
+	z-index: 2;
+	color: #676666;
+}
+.blank :nth-child(1) {
+	color: #282828;
+	margin-top: 15rem !important;
+}
+.blank :nth-child(2) {
+	/* position: absolute;
+	left: 50%;
+
+	transform: translate(-50%, 0); */
+	font-size: 180px;
+	top: 5rem;
+	width: 80%;
+	margin-bottom: 9rem;
+}
+.aboutPage section {
+	width: 100vw;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+.line {
+	border-right: 1px solid black;
+}
+.imgg {
+	width: 100%;
+	height: 700px;
+	position: relative;
+	background-size: cover;
+	z-index: 1;
+}
+.imgg::before {
+	content: "";
+	position: absolute;
+	height: 100vh;
+	width: 100%;
+	z-index: 4;
+	top: 0;
+	left: 0;
+	border-right: 1px solid black;
+	/* background: red; */
+}
+.img1 {
+	background: url("https://assets.codepen.io/2621168/img1.jpg");
+}
+.img2 {
+	background: url("https://assets.codepen.io/2621168/img1.jpg");
+}
+.img3 {
+	background: url("https://assets.codepen.io/2621168/img1.jpg");
+}
+.img4 {
+	background: url("https://assets.codepen.io/2621168/img1.jpg");
+}
+.img5 {
+	background: url("https://assets.codepen.io/2621168/img1.jpg");
+}
+.img6 {
+	background: url("https://assets.codepen.io/2621168/img1.jpg");
+}
+.aboutPage .blank {
+	width: 100%;
+	height: 100vh;
+	background: rgb(219, 219, 219);
+	position: relative;
+	bottom: -60vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+	margin-top: 10rem;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+	.bold h1 {
+		font-size: 70px !important;
+		text-transform: uppercase;
+		font-family: "Lilita One", serif;
+		margin-top: 2rem;
+		/* color: rgb(228, 96, 96) !important; */
+		text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+			1px 1px 0 #000;
+	}
+	h1 {
+		position: relative;
+		font-size: 34px !important;
+		font-weight: 900;
+		letter-spacing: 0.1rem !important;
+		z-index: 2;
+		font-family: "Shadows Into Light", serif;
+		color: rgb(75, 75, 75);
+	}
+	.hero h1 {
+		display: block;
+	}
+	.portfolioText {
+		position: relative;
+		top: 1rem;
+		left: 1rem !important;
+	}
+	.content {
+		overflow-x: hidden !important;
+	}
+	.containe {
+		display: flex;
+		flex-direction: column;
+		overflow-x: hidden;
+	}
+	.heroInro {
+		display: flex;
+		flex-direction: column;
+		display: none !important;
+	}
+	.heroIntro p {
+		left: 0 !important;
+	}
+	.aboutPage h2 {
+		font-size: 3rem;
+		position: relative;
+		top: 0;
+	}
+	.aboutPage section {
+		width: 100vw;
+		height: 50vh;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+	.imgg {
+		height: 400px;
+		background-size: cover;
+	}
+	.imgg::before {
+		height: 50vh;
+	}
+	.aboutPage .blank {
+		bottom: -35vh;
+	}
+	.blank h3 {
+		font-size: 70px;
+	}
+	.blank :nth-child(2) {
+		font-size: 100px;
+	}
+	.aboutPage {
+		height: 300vh;
+	}
 }
